@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './stylles.css';
 //https://sujeitoprogramador.com/rn-api/?api-posts
 
 class App extends Component{
@@ -27,10 +28,11 @@ class App extends Component{
         
         {this.state.nutri.map((item)=>{
           return(
-            <article>
-              <strong> {item.titulo} </strong>
-              <img src={item.capa} />
-              <p> {item.subititulo} </p>
+            <article key={item.id} className="post">
+              <strong className="titulo"> {item.titulo} </strong>
+              <img src={item.capa} className="capa" />
+              <p className="subtitulo"> {item.subititulo} </p>
+              <a className="botao" href="#">Acessar</a>
             </article>
           );
         })}
