@@ -19,7 +19,7 @@ class App extends Component{
         let state = this.state;
         state.nutri = json;
         this.setState(state);
-        console.log(json);
+        //console.log(json);
     })
   }
   render(){
