@@ -18,15 +18,24 @@ class App extends Component{
         let state = this.state;
         state.nutri = json;
         this.setState(state);
-        console.log(json);
+        //console.log(json);
     })
   }
   render(){
     return(
-      <div>
-
+      <div className="container">
+        
+        {this.state.nutri.map((item)=>{
+          return(
+            <article>
+              <strong> {item.titulo} </strong>
+              <img src={item.capa} />
+              <p> {item.subititulo} </p>
+            </article>
+          );
+        })}
       </div>
-    )
+    );
   }
 }
 
