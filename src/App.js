@@ -25,7 +25,11 @@ class App extends Component{
   render(){
     return(
       <div className="container">
-        
+        <header>
+          <strong>
+            React Nutri
+          </strong>
+        </header>
         {this.state.nutri.map((item)=>{
           return(
             <article key={item.id} className="post">
